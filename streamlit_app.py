@@ -33,7 +33,6 @@ def generate_content(prompts):
     except Exception as e:
         return f"Error occurred during content generation: {str(e)}"
 
-
 #streamlit UI
 def app():
     st.header("Final Project in CCS 229 - Intelligent Systems")
