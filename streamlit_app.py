@@ -5,7 +5,7 @@ import os
 def generate_content(prompts):
     try:
         # Provide your API key here
-        api_key = "YOUR_API_KEY_HERE"
+        api_key = "AIzaSyC4fqGb1Ur62ur5j2jHMcx15g5dlTHJwfo"
 
         # Configuration
         genai.configure(api_key=api_key)
