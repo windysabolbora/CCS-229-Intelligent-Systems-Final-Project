@@ -5,7 +5,7 @@ import os
 def generate_content(prompts):
     try:
         # Provide your API key here
-        api_key = "AIzaSyC4fqGb1Ur62ur5j2jHMcx15g5dlTHJwfo"
+        api_key = "YOUR_API_KEY_HERE"
 
         # Configuration
         genai.configure(api_key=api_key)
@@ -24,7 +24,12 @@ def generate_content(prompts):
 
         # Generate Content
         response = model.generate_content([combined_prompt])
-        return response.text
+
+        # Check if response is valid
+        if response.part and response.text:
+            return response.text
+        else:
+            return "The generated content was blocked for safety reasons. Please try again with a different prompt."
     except Exception as e:
         return f"Error occurred during content generation: {str(e)}"
 
