@@ -2,11 +2,6 @@ import streamlit as st
 import google.generativeai as genai
 import os
 
-
-import streamlit as st
-import google.generativeai as genai
-import os
-
 def generate_content(prompts):
     try:
         # Provide your API key here
