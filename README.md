@@ -3,25 +3,20 @@ This project is a web application developed using Streamlit, designed to enable 
 
 <h1>Project Setup</h1>
 
-            1. Install dependencies :
-            
-                        - Python
-                        
-                        - Install library such as google-generativeai, and streamlit
-                        
+            1. Install dependencies :            
+                        - Python                        
+                        - Install library such as google-generativeai, and streamlit                        
                         - Set up environment variables
                         
-            2. Use API <br>
+            2. Use API            
                         - Obtaining an API key from Google Generative AI.
                         
             3. Clone Repository 
             
-            4. Create a .env file 
-            
+            4. Create a .env file             
                         - This is were you put your API 
                         
             5. Run the application
-            
                         - Execute the "streamlit run streamlit_app.py" to run the streamlit application.
 
 <h1>Features: </h1>
