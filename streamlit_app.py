@@ -26,10 +26,10 @@ def generate_content(prompts):
         response = model.generate_content([combined_prompt])
 
         # Check if response is valid
-        if response.part and response.text:
+        if hasattr(response, 'text') and response.text:
             return response.text
         else:
-            return "The generated content was blocked for safety reasons. Please try again with a different prompt."
+            return "Error: The response from the API did not contain valid content."
     except Exception as e:
         return f"Error occurred during content generation: {str(e)}"
 
