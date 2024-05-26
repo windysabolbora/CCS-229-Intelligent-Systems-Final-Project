@@ -46,7 +46,7 @@ def app():
     West Visayas State University
     """
     st.markdown(text)
-    st.title("Creative Text Recommendation")
+    st.title("Literature Generator")
     st.markdown("---")
 
     #initial prompt
