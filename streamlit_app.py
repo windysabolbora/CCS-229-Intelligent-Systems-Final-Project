@@ -63,7 +63,7 @@ def app():
 
     if st.session_state.step == 1:
         st.write(get_initial_prompt())
-        choice = st.text_input("Please, choose your option:")
+        choice = st.text_input("Choose your option:")
         if st.button("Next"):
             st.session_state.choice = choice
             st.session_state.step = 2
