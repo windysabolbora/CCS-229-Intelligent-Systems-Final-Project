@@ -3,10 +3,17 @@ import google.generativeai as genai
 import os
 
 
+import streamlit as st
+import google.generativeai as genai
+import os
+
 def generate_content(prompts):
     try:
+        # Provide your API key here
+        api_key = "AIzaSyC4fqGb1Ur62ur5j2jHMcx15g5dlTHJwfo"
+
         # Configuration
-        genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+        genai.configure(api_key=api_key)
         generation_config = {
             "temperature": 0.9,
             "top_p": 1,
@@ -25,6 +32,7 @@ def generate_content(prompts):
         return response.text
     except Exception as e:
         return f"Error occurred during content generation: {str(e)}"
+
 
 #streamlit UI
 def app():
