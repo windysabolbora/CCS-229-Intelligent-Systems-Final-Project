@@ -2,7 +2,17 @@
 This project is a web application developed using Streamlit, designed to enable users to generate textual content through a Generative AI model. The application is particularly focused on producing outputs related to selected literary works.
 
 <h1>Project Setup</h1>
-            1.
+            1. Install dependencies : <br> 
+                        *Python <br>
+                        *Install library such as google-generativeai, and streamlit <br>
+                        *Set up environment variables <br>
+            2. Use API <br>
+                        *Obtaining an API key from Google Generative AI. <br>
+            3. Clone Repository <br>
+            4. Create a .env file <br>
+                        *This is were you put your API
+            5. Run the application
+                        *Execute the "streamlit run streamlit_app.py" to run the streamlit application.
 
 <h1>Features: </h1>
             1. Users choose their specified literary content. <br>
