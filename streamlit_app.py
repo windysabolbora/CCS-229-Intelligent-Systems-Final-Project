@@ -3,26 +3,28 @@ import google.generativeai as genai
 import os
 
 
-# Function to generate content
 def generate_content(prompts):
-    # Configuration
-    genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-    generation_config = {
-        "temperature": 0.9,
-        "top_p": 1,
-        "top_k": 1,
-        "max_output_tokens": 2048
-    }
+    try:
+        # Configuration
+        genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+        generation_config = {
+            "temperature": 0.9,
+            "top_p": 1,
+            "top_k": 1,
+            "max_output_tokens": 2048
+        }
 
-    # Initialize Model
-    model = genai.GenerativeModel("gemini-pro", generation_config=generation_config)
+        # Initialize Model
+        model = genai.GenerativeModel("gemini-pro", generation_config=generation_config)
 
-    # Combine prompts into a single prompt
-    combined_prompt = " ".join(prompts)
+        # Combine prompts into a single prompt
+        combined_prompt = " ".join(prompts)
 
-    # Generate Content
-    response = model.generate_content([combined_prompt])
-    return response.text
+        # Generate Content
+        response = model.generate_content([combined_prompt])
+        return response.text
+    except Exception as e:
+        return f"Error occurred during content generation: {str(e)}"
 
 #streamlit UI
 def app():
