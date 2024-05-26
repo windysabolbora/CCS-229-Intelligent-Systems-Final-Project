@@ -1,2 +1,4 @@
-Literature Generator
+#Literature Generator
+
+##Project overview:  
 
