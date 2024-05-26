@@ -56,9 +56,9 @@ def app():
     #follow up prompt
     def get_follow_up_prompt(choice):
         prompts = {
-            "story": "**Great choice!** What genre of story are you interested in? (e.g., fantasy, mystery, sci-fi)",
-            "poem": "**Nice!** What theme would you like the poem to have? (e.g., love, nature, adventure)",
-            "article": "**Interesting!** What topic should the article be about? (e.g., technology, health, sports)"
+            "story": "Great choice! What genre of story are you interested in? (e.g., fantasy, mystery, sci-fi)",
+            "poem": "Nice! What theme would you like the poem to have? (e.g., love, nature, adventure)",
+            "article": "Interesting! What topic should the article be about? (e.g., technology, health, sports)"
         }
         return prompts.get(choice.lower(), "Sorry, I didn't understand that choice. Please choose story, poem, or article.")
     #step 1
@@ -81,7 +81,7 @@ def app():
         if st.button("Generate"):
             final_prompt = f"Create a {st.session_state.choice} about {detail}."
             generated_text = generate_content([final_prompt])
-            st.write("\n**Here is your generated text**:")
+            st.write("\nHere is your generated text:")
             st.write(generated_text)
             st.session_state.step = 3
     #step3
